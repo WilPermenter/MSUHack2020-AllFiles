@@ -1,0 +1,243 @@
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    line-height: inherit;
+    color:inherit;
+}
+html, body{
+    font-family: "sans-serif", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color:#444;
+}
+i{
+    font-style: italic;
+}
+
+body {
+    text-align: center;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #fff;
+}
+h1 sub{
+    color: #aaa;
+    vertical-align: baseline;
+}
+h2 {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: bold;
+}
+p{
+    margin-bottom: 10px;
+}
+a{
+    color:#58b;
+}
+a:hover{
+    color:#369;
+}
+section {
+    padding: 50px 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+section:not(:first-of-type){
+    border-top: 2px dashed #eee;
+}
+section:target h1{
+    animation: flash 1s;
+}
+@keyframes flash{
+  from{
+    text-shadow: 1px 1px 0px #3771a1,
+                  -1px -1px 0px #3771a1;
+  }to{
+    text-shadow: 0px 0px 0px #3771a1;
+  }
+}
+address{
+    white-space: pre-line;
+    margin-bottom: 20px;
+}
+/*END ATRIBUTES*/
+#portfolio{
+    border-top: none;
+}
+/*CLASSES*/
+.cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9999;
+}
+.topbackground{
+    background-color: #e5e7f0;
+}
+.hero{
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0;
+    padding: 0;
+}
+.hero img{
+  width: 100%;
+  height: 100%;
+}
+
+.headshot{
+  width: 280px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.postheader p{
+  margin-bottom: 0;
+  margin
+}
+
+.list li{
+  display: inline;
+  font-weight: bold;
+}
+.list li:not(:last-child):after{
+  content: ", ";
+}
+/* PROJECTS */
+.blocklist > li{
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 10px;
+  border-color:#fff #eee;
+}
+.blocklist > li > div{
+  flex-grow: 1;
+  align-self: center;
+}
+    .blocklist > li > img {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        margin: 0 10px;
+    }
+.blocklist > li:nth-child(odd){
+  flex-direction: row;
+  text-align: left;
+  border-left: 0;
+}
+.blocklist > li:nth-child(even){
+  flex-direction: row-reverse;
+  text-align: right;
+  border-right: 0;
+}
+@media (max-width:500px) {
+  .blocklist > li{
+    display: block;
+    text-align: center !important;
+    border-width: 0;
+    margin: 50px 0;
+  }
+}
+/* END PROJECTS */
+/* BIO */
+.prose{
+    text-align: justify;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.prose p
+.prose ul{
+    margin: 20px auto;
+}
+.prose li {
+    list-style-position:inside;
+}
+.pastskills li{
+    margin-left: 20px;
+}
+/* END BIO */
+/* NAV BAR */
+.nav-container {
+    width: 100%;
+    height: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: -webkit-sticky; /*safari*/
+    position: sticky;
+    top: 0;
+    background-color: #3498db;
+    z-index: 9998;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex !important;
+    list-style: none !important;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: block;
+    margin: 0 2rem;
+}
+
+.nav-item {
+    position: relative;
+    line-height: 4rem;
+}
+    .nav-item a {
+        color: #444;
+    }
+
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*END NAV BAR*/
+
+/*END CLASSES*/
